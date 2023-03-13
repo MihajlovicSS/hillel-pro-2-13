@@ -5,12 +5,10 @@ const submitBtn = document.querySelector('#submitButton')
 const submitTr = document.querySelector('#submit-tr')
 const table = document.querySelector('#table')
 
-addToListOnClickSubmit ()
+table.addEventListener('keyup', onEnterClick)
+submitBtn.addEventListener('click', onButtonClick)
+inputName.focus()
 
-function addToListOnClickSubmit (){
-    table.addEventListener('keyup', onEnterClick)
-    submitBtn.addEventListener('click', onButtonClick)
-}
 function onEnterClick(e){
     if(e.key === 'Enter'){
         console.log('Success')
@@ -22,10 +20,12 @@ function onButtonClick(){
     if(!isDataValid(data)){
         showError()
         clearInputs()
+        inputName.focus()
         return
     }   
     createTableRowWithNewData(data) 
     clearInputs()
+    inputName.focus()
 }
 function getData(){
     return {

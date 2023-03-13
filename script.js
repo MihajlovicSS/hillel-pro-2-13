@@ -1,3 +1,4 @@
+'use sctrict'
 const inputName = document.querySelector('#inputName')
 const inpuSurname = document.querySelector('#inpuSurname')
 const inputPhone = document.querySelector('#inputPhone')

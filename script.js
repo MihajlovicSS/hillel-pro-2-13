@@ -10,10 +10,7 @@ submitBtn.addEventListener('click', onButtonClick)
 inputName.focus()
 
 function onEnterClick(e){
-    if(e.key === 'Enter'){
-        console.log('Success')
-        submitBtn.click()
-    }
+    if(e.key === 'Enter') submitBtn.click()
 }
 function onButtonClick(){
     const data = getData()

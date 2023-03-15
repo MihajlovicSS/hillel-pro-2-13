@@ -1,6 +1,6 @@
 'use sctrict'
 const inputName = document.querySelector('#inputName')
-const inpuSurname = document.querySelector('#inputSurname')
+const inputSurname = document.querySelector('#inputSurname')
 const inputPhone = document.querySelector('#inputPhone')
 const submitBtn = document.querySelector('#submitButton')
 const submitTr = document.querySelector('#submit-tr')
@@ -26,7 +26,7 @@ function onButtonClick(){
 function getData(){
     return {
         name: inputName.value,
-        surname: inpuSurname.value,
+        surname: inputSurname.value,
         phone: inputPhone.value
     }
 }
@@ -51,7 +51,7 @@ function createTableRowWithNewData(data){
 }
 function clearInputs(){
     inputName.value = '';
-    inpuSurname.value = '';
+    inputSurname.value = '';
     inputPhone.value = '';
 }
 function showError(){

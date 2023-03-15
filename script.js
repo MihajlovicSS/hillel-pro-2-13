@@ -1,6 +1,6 @@
 'use sctrict'
 const inputName = document.querySelector('#inputName')
-const inpuSurname = document.querySelector('#inpuSurname')
+const inpuSurname = document.querySelector('#inputSurname')
 const inputPhone = document.querySelector('#inputPhone')
 const submitBtn = document.querySelector('#submitButton')
 const submitTr = document.querySelector('#submit-tr')
@@ -15,15 +15,13 @@ function onEnterClick(e){
 }
 function onButtonClick(){
     const data = getData()
+    clearInputs()
+    inputName.focus()
     if(!isDataValid(data)){
         showError()
-        clearInputs()
-        inputName.focus()
         return
     }   
     createTableRowWithNewData(data) 
-    clearInputs()
-    inputName.focus()
 }
 function getData(){
     return {
